@@ -14,13 +14,15 @@ class Solution:
         if ind!=-1:
             nums[ind],nums[swap]=nums[swap],nums[ind]
             start=ind+1
-            end=n 
-            while(start<end):
-                nums[start],nums[end]=nums[end],nums[start]
-                start+=1 
-                end-=1 
+            end=n
         else:
-            nums.sort()
+            start=0
+            end=n
+        while(start<end):
+            nums[start],nums[end]=nums[end],nums[start]
+            start+=1 
+            end-=1 
+    
 
 
 
