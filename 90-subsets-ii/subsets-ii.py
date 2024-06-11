@@ -6,16 +6,16 @@ class Solution:
                 for j in range(n):
                     if check[j]!=-1:
                         l.append(arr[j])
-                ans.add(tuple(sorted(l)))
+                ans.append(l)
                 return
             else:
                 check[i]=1
                 solve(n,arr,check,i+1,ans)
                 check[i]=-1
                 solve(n,arr,check,i+1,ans)
-        ans=set()
+        ans=[]
         nums.sort()
         n=len(nums)
         check=[0]*n
         solve(n,nums,check,0,ans)
-        return [list(t) for t in ans]
+        return list(map(list, {tuple(i) for i in ans}))
