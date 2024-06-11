@@ -12,8 +12,6 @@ class Solution:
                 solve(n,arr,check,i+1,ans)
                 check[i]=-1
                 solve(n,arr,check,i+1,ans)
-            
-        check=[]
         ans=[]
         n=len(nums)
         check=[0]*n
