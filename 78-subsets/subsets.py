@@ -16,7 +16,6 @@ class Solution:
         check=[]
         ans=[]
         n=len(nums)
-        for i in range(n):
-            check.append(-1)
+        check=[0]*n
         solve(n,nums,check,0,ans)
         return ans
